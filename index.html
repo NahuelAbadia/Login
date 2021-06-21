@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Abadia Website</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="inner-box" id="card">
+                <div class="card-front">
+
+    <!-- ============================ INICIO DE SESION =================================== -->
+
+                    <h2>Iniciar sesión</h2>
+                    <form action="pag2.html"> <!-- Action=" " sirve para redireccionar a otra pagina -->
+                        <input type="email" class="input-box" placeholder="Email" required>
+                        <input type="password" class="input-box" placeholder="Contraseña" required>
+                        <button type="submit" class="Enviar-btn">Iniciar sesión</button>
+                        <input type="checkbox" class="checkbox"><span>Recordar siempre</span>
+                        <p></p>                  
+                    </form>
+                    <button type="button" class="btn" onclick="openRegister()">Registrarme</button>
+                    <a href="#">Olvide mi contraseña</a>
+                </div>
+
+    <!-- ============================== REGISTRARSE ======================================= -->
+
+                <div class="card-back">
+                    <h2>Registrate</h2>
+                    <form>
+                        <input type="text" class="input-box" placeholder="Nombre" required>
+                        <input type="email" class="input-box" placeholder="Email" required>
+                        <input type="password" class="input-box" placeholder="Contraseña" required>
+                        <button type="submit" class="Enviar-btn">Registrate</button>
+                        <input type="checkbox"><span>Recordar siempre</span>                      
+                    </form>
+                    <button type="button" class="btn" onclick="openLogin()">Ya tengo una cuenta</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================ JAVASCRIPT =================================== -->
+    <!-- Hacer un if para que la contraseña tenga al menos X cantidad de caracteres -->
+
+    <script>
+       var card = document.getElementById("card");
+
+       function openRegister(){
+            card.style.transform = "rotateY(-180deg)";
+       }
+       function openLogin(){
+            card.style.transform = "rotateY(0deg)";
+       }
+    </script>
+
+</body>
+</html>
